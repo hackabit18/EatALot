@@ -21,6 +21,7 @@ var vendorRouter = require('./routes/vendors');
 var cropOrderRouter = require('./routes/crop_orders');
 var cropOrderRouterUser = require('./routes/crop_orders_users');
 var cropPosted = require('./routes/crop_posted');
+var vendorProds = require('./routes/vendor_prods');
 
 //~Connecting to the server
 const url = config.mongoUrl;
@@ -68,6 +69,7 @@ app.use('/vendors', vendorRouter);
 app.use('/corders', cropOrderRouter);
 app.use('/corders_users', cropOrderRouterUser);
 app.use('/cposted', cropPosted);
+app.use('/vprods', vendorProds);
 
 //~Authorization function (Use with Sessions)
 /*
